@@ -40,3 +40,9 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     //clear withdraw input field
     withdrawInput.value = "";
 })
+
+//home button handler
+
+document.getElementById('home').addEventListener('click', function () {
+    window.location.href = 'baper-bank.html';
+})
