@@ -37,6 +37,16 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     const currentBalance = previousBalance - withdrawAmount;
     balanceUpdate.innerText = currentBalance;
 
+    if (withdrawAmount > previousBalance) {
+        console.log('your amount is crossing your balance limit');
+        balanceUpdate.innerText = previousBalance;
+        withdrawTotoal.innerText = 'Cross your balance limit'
+
+    }
+    if (withdrawTotoal.innerText == 'NaN') {
+        withdrawTotoal.innerText = withdrawAmount;
+    }
+
     //clear withdraw input field
     withdrawInput.value = "";
 })
